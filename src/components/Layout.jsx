@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import LeadCaptureModal from './LeadCaptureModal';
 
 const Layout = () => {
   return (
@@ -43,6 +44,7 @@ const Layout = () => {
         </div>
         <p>&copy; 2025 Real Estate</p>
       </footer>
+      <LeadCaptureModal />
     </div>
   );
 };
