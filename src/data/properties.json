@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "123 Main St, Anytown, USA",
+    "description": "A beautiful family home with a large backyard.",
+    "price": 500000,
+    "location": "Anytown",
+    "type": "House",
+    "images": [
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "456 Oak Ave, Anytown, USA",
+    "description": "A modern condo in the heart of downtown.",
+    "price": 300000,
+    "location": "Anytown",
+    "type": "Condo",
+    "images": [
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "789 Pine Ln, Anytown, USA",
+    "description": "A cozy cabin in the woods, perfect for a getaway.",
+    "price": 200000,
+    "location": "Anytown",
+    "type": "Cabin",
+    "images": [
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "101 Elm St, Othertown, USA",
+    "description": "A charming bungalow with a white picket fence.",
+    "price": 400000,
+    "location": "Othertown",
+    "type": "House",
+    "images": [
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "212 Maple Ave, Othertown, USA",
+    "description": "A spacious apartment with a city view.",
+    "price": 250000,
+    "location": "Othertown",
+    "type": "Apartment",
+    "images": [
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400",
+      "https://via.placeholder.com/600x400"
+    ]
+  }
+]
