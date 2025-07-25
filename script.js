@@ -1,48 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const leadGenForm = document.getElementById('lead-gen-form');
-    const modal = document.getElementById('lead-gen-modal');
-    const closeButton = document.querySelector('.close-button');
+    const leadCaptureModal = document.getElementById('lead-capture-modal');
+    const leadCaptureForm = document.getElementById('lead-capture-form');
 
     // Show the modal on page load
-    modal.style.display = 'block';
+    leadCaptureModal.classList.remove('hidden');
 
-    // Close the modal when the close button is clicked
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    // Close the modal when the user clicks outside of it
-    window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    contactForm.addEventListener('submit', function(event) {
+    leadCaptureForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-
-        alert(`Thank you for your message, ${name}! We will get back to you at ${email} as soon as possible.`);
-
-        contactForm.reset();
-    });
-
-    leadGenForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(leadGenForm);
+        const formData = new FormData(leadCaptureForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const phone = formData.get('phone');
 
         alert(`Thank you for your interest, ${name}! An agent will contact you at ${phone} or ${email} shortly.`);
 
-        leadGenForm.reset();
-        modal.style.display = 'none';
+        leadCaptureForm.reset();
+        leadCaptureModal.classList.add('hidden');
+    });
+
+    // Fade-in animation
+    const sections = document.querySelectorAll('section');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
